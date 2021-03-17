@@ -12,5 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Маршрут для загрузки формы
+Route::get('/', [CalculateController::class, 'index'])->name('index');
 
 
