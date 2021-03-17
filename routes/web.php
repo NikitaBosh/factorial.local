@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 //Маршрут для загрузки формы
 Route::get('/', [CalculateController::class, 'index'])->name('index');
-
+//Маршрут для вычисления факториала числа
+Route::post('/', [CalculateController::class, 'factorial'])->name('factorial');
 
