@@ -175,6 +175,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+                App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
+
+        /*
+         * Our service providers
+         */
+        App\Providers\CalculateServiceProvider::class,
     ],
 
     /*
@@ -226,6 +233,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        /*
+         *Our facades
+         */
+        'Calculate' => App\Facades\CalculateFacade::class,
 
     ],
 

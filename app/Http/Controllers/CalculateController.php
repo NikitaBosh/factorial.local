@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use Calculate;
+use App\Http\Requests\FactorialRequest;
 
 class CalculateController extends Controller
 {
@@ -19,19 +19,15 @@ class CalculateController extends Controller
     /**
      * Вычисления факториала
      *
-     * @param Request $request получение данных из формы
+     * @param FactorialRequest $request получение данных из формы
      *
      */
-    public function factorial(Request $request)
+    public function factorial(FactorialRequest $request)
     {
             // получение данных
             $number = $request->number;
-            // валидация
-            $validation = $request->validate([
-                'number' => 'required|numeric|integer|min:0',
-            ]);
             // вычисление факториала
-            $factorial = 1;
+            $factorial = Calculate::factorial($number);
                 for ($i=1; $i <= $number ; $i++) {
                 $factorial *=$i;
                 }
