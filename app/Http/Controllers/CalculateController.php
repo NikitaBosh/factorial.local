@@ -28,7 +28,7 @@ class CalculateController extends Controller
             $number = $request->number;
             // валидация
             $validation = $request->validate([
-                'number' => 'required|integer|min:0',
+                'number' => 'required|numeric|integer|min:0',
             ]);
             // вычисление факториала
             $factorial = 1;

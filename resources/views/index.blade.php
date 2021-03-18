@@ -19,5 +19,13 @@
         <button type="submit">Вычислить</button>
     </form>
     <!-- Ошибки -->
+@if ($errors->any())
+    <h4>Ошибки:</h4>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+@endif
 </body>
 </html>
