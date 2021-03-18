@@ -27,4 +27,18 @@ class FactorialRequest extends FormRequest
             'number' => 'required|numeric|integer|min:0',
         ];
     }
+/**
+ * Get the error messages for the defined validation rules.
+ *
+ * @return array
+ */
+public function messages()
+{
+    return [
+        'number.required' => 'Введите данные',
+        'number.numeric' => 'Введите число',
+        'number.integer' => 'Введите целое число',
+        'number.min' => 'Число должно быть больше :min',
+    ];
+}
 }
